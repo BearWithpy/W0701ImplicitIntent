@@ -14,7 +14,17 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.btnHomepage.setOnClickListener{
-            val uri = Uri.parse("https://google.com")
+            val uri = Uri.parse("https://github.com/bearwithpy")
+            val intent = Intent(Intent.ACTION_VIEW, uri)
+            startActivity(intent)
+        }
+        binding.btnMap.setOnClickListener{
+            val uri = Uri.parse("geo:0,0?z=17q=경남 거제시 일운면 소동8길 11")
+            val intent = Intent(Intent.ACTION_VIEW, uri)
+            startActivity(intent)
+        }
+        binding.btnTelephone.setOnClickListener{
+            val uri = Uri.parse("tel:010-7197-3338")
             val intent = Intent(Intent.ACTION_VIEW, uri)
             startActivity(intent)
         }
